@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+Disallow: /admin/
+
+Allow: /
+
+Sitemap: https://zbkvln.github.io/portfolio/sitemap.xml

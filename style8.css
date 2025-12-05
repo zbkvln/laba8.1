@@ -1,0 +1,129 @@
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background: rgb(255, 245, 247);
+    color: rgb(51, 51, 51);
+}
+
+/* Шапка с логотипом и текстом слева */
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgb(255, 235, 243);
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.logo-container {
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.logo-container img {
+    height: 70px;
+    width: auto;
+    max-width: 180px;
+    display: block;
+}
+
+.header-text {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.header-text h1 {
+    color: rgb(124, 31, 78);
+    margin: 0 0 8px 0;
+    font-size: 1.6em;
+}
+
+.header-text p {
+    margin: 4px 0;
+    font-size: 0.95em;
+    color: rgb(51, 51, 51);
+}
+
+section {
+    margin: 15px auto;
+    padding: 15px;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+}
+
+h2 {
+    color: rgb(179, 52, 111);
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid rgb(255, 204, 224);
+    padding-bottom: 5px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 5px 0;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.project {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgb(255, 250, 251);
+    border-left: 3px solid rgb(255, 182, 193);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    background: rgb(255, 235, 243);
+    border-radius: 8px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .logo-container img {
+        height: 60px;
+        margin: 0 auto;
+    }
+    
+    .header-text {
+        text-align: center;
+    }
+    
+    .header-text h1 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container img {
+        height: 50px;
+    }
+    
+    .header-text h1 {
+        font-size: 1.3em;
+    }
+    
+    .header-text p {
+        font-size: 0.9em;
+    }
+}
