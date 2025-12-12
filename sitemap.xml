@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://zbkvln.github.io/portfolio/</loc>
-        <lastmod>2025-04-10</lastmod>
+        <loc>https://zbkvln.github.io/laba8.1/</loc>
+        <lastmod>2025-12-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://zbkvln.github.io/portfolio/about.html</loc>
-        <lastmod>2025-04-10</lastmod>
+        <loc>https://zbkvln.github.io/laba8.1/about.html</loc>
+        <lastmod>2025-12-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://zbkvln.github.io/portfolio/portfolio.html</loc>
-        <lastmod>2025-04-10</lastmod>
+        <loc>https://zbkvln.github.io/laba8.1/portfolio.html</loc>
+        <lastmod>2025-12-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://zbkvln.github.io/portfolio/contacts.html</loc>
-        <lastmod>2025-04-10</lastmod>
+        <loc>https://zbkvln.github.io/laba8.1/contacts.html</loc>
+        <lastmod>2025-12-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
+
 </urlset>
