@@ -6,4 +6,5 @@ Disallow: /admin/
 
 Allow: /
 
-Sitemap: https://zbkvln.github.io/portfolio/sitemap.xml
+
+Sitemap: https://zbkvln.github.io/laba8.1/sitemap.xml
