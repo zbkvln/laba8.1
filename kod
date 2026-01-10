@@ -1,0 +1,231 @@
+1. Задание по XML. «составить XML студентов.. что-то про поступление
+<!DOCTYPE students [
+    <!ELEMENT students (student+)>
+    <!ELEMENT student (fullname, faculty, specialty, year, examScore)>
+    <!ELEMENT fullname (#PCDATA)>
+    <!ELEMENT faculty (#PCDATA)>
+    <!ELEMENT specialty (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT examScore (#PCDATA)>
+        <!ATTLIST student id ID #REQUIRED>
+]>
+
+<students>
+    <student id="s1">
+        <fullname>Иванов Иван Иванович</fullname>
+        <faculty>Факультет информационных технологий</faculty>
+        <specialty>Программная инженерия</specialty>
+        <year>2024</year>
+        <examScore>265</examScore>
+    </student>
+
+    <student id="s2">
+        <fullname>Петрова Анна Сергеевна</fullname>
+        <faculty>Экономический факультет</faculty>
+        <specialty>Экономика</specialty>
+        <year>2023</year>
+        <examScore>248</examScore>
+    </student>
+
+    <student id="s3">
+        <fullname>Смирнов Дмитрий Олегович</fullname>
+        <faculty>Факультет информационных технологий</faculty>
+        <specialty>Информационные системы</specialty>
+        <year>2024</year>
+        <examScore>272</examScore>
+    </student>
+
+    <student id="s4">
+        <fullname>Кузнецова Мария Андреевна</fullname>
+        <faculty>Юридический факультет</faculty>
+        <specialty>Юриспруденция</specialty>
+        <year>2022</year>
+        <examScore>255</examScore>
+    </student>
+</students>
+2. По сценариям (как в кр на четность и на положительность)
+/* Напишите сценарий на JavaScript, который получает значение из текстового поля (input) 
+и проверяет, является ли оно четным или нечетным числом. Если число четное, должно появиться сообщение 
+"Число четное", если нечетное — "Число нечетное". Если введено не число, выводится сообщение "Пожалуйста, введите число".
+*/
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Четное или нечетное</title>
+</head>
+<body>
+
+    <h3>Проверка числа</h3>
+
+    <input type="text" id="numberInput" placeholder="Введите число">
+    <button onclick="checkNumber()">Проверить</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            let value = document.getElementById("numberInput").value;
+            let number = Number(value);
+            let result = document.getElementById("result");
+
+            if (isNaN(number)) {
+                result.textContent = "Пожалуйста, введите число";
+            } else if (number % 2 === 0) {
+                result.textContent = "Число четное";
+            } else {
+                result.textContent = "Число нечетное";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+/*Напишите сценарий на JavaScript, который "берет" значение из поля ввода и сравнивает 
+его с числом 0. Если значение больше или равно 0, должно появиться сообщение "Число неотрицательное", 
+в противном случае — "Число отрицательное". Приложите файлы html или txt в качестве ответа.*/
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка числа</title>
+</head>
+<body>
+
+    <h3>Проверка числа на знак</h3>
+
+    <input type="text" id="numberInput" placeholder="Введите число">
+    <button onclick="checkNumber()">Проверить</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            let value = document.getElementById("numberInput").value;
+            let number = Number(value);
+            let result = document.getElementById("result");
+
+            if (isNaN(number)) {
+                result.textContent = "Пожалуйста, введите число";
+            } else if (number >= 0) {
+                result.textContent = "Число неотрицательное";
+            } else {
+                result.textContent = "Число отрицательное";
+            }
+        }
+    </script>
+
+</body>
+</html>
+3. Внутренний и внешний css
+index.html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример CSS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Привет!</h1>
+
+    <p>Это пример страницы с внутренним и внешним CSS.</p>
+
+    <button class="btn">Нажми меня</button>
+
+</body>
+</html>
+
+style.css:
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: darkorange;
+}
+
+4. Имя фамилия пароль
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+</head>
+<body align="center">
+
+<h1>Анкета пользователя</h1>
+<h3>Заполните обязательные поля</h3>
+
+<form id="form" style="background-color:white; padding:20px; display:inline-block; text-align:left;">
+
+    <label>Имя *</label><br>
+    <input type="text" id="name" required placeholder="Введите имя"><br><br>
+
+    <label>Телефон *</label><br>
+    <input type="tel" id="phone" required
+           placeholder="+79999999999"
+           pattern="^(\+7|8)\d{10}$"
+           title="Формат: +79999999999 или 89999999999"><br><br>
+
+    <label>Пароль *</label><br>
+    <input type="password" id="password1" required><br><br>
+
+    <label>Повторите пароль *</label><br>
+    <input type="password" id="password2" required><br><br>
+
+    <input type="submit" value="Отправить">
+    <input type="reset" value="Очистить"><br><br>
+
+    <p id="message" align="center"></p>
+
+</form>
+
+<script>
+    document.getElementById("form").addEventListener("submit", function(e) {
+        let pass1 = document.getElementById("password1").value;
+        let pass2 = document.getElementById("password2").value;
+        let message = document.getElementById("message");
+
+        if (pass1 !== pass2) {
+            e.preventDefault();
+            message.textContent = "Пароли не совпадают";
+            message.style.color = "red";
+        } else {
+            message.textContent = "Пароли совпадают";
+            message.style.color = "green";
+        }
+    });
+</script>
+
+</body>
+</html>
+
